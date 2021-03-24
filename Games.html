@@ -1,0 +1,98 @@
+<html>
+    <head>
+        <title>Games</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="navbar">
+                <a href="index.html"><img src="Resident evil banner.jpg" class="logo"></a>
+                <nav>
+                    <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="About.html">About</a></li>
+                    <li><a class="active" href="Games.html">Games</a></li>
+                    </ul>
+                </nav>
+            </div>
+            
+            
+            <div class="slider">
+                <img src="Resident evil info 0.jpg" id="Slide">
+            </div>
+
+            <div class="steamlink">
+                <nav>
+                    <ul>
+                        <li><p>You can get all the Resident Evil games on steam <a href="https://store.steampowered.com/curator/34827950">here</a></p></li>
+                    </ul>
+                </nav>
+                <a href="https://store.steampowered.com/curator/34827950"><img src="steam-logo-transparent.png" class="steamlogo" width="30" height="30"></a>
+            </div>
+            
+            <div class="controller">
+                <img src="arrowleft.png" id="BackBtn" Width= "50">
+                
+                <img src="arrowright.png" id="NextBtn" width="50">
+            </div>
+
+         </div>
+
+        
+        
+        <script>
+            var Slide = document.getElementById("Slide");
+            var BackBtn = document.getElementById("BackBtn");
+            var NextBtn = document.getElementById("NextBtn");
+
+            var slideimages = new Array(
+                "Resident evil info 0.jpg",
+                "Resident evil info 1.jpg",
+                "Resident evil info 2.jpg",
+                "Resident evil info 3.jpg",
+                "Resident evil info 4.jpg",
+                "Resident evil info 5.jpg",
+                "Resident evil info 6.jpg",
+                "Resident evil info 7.jpg",
+                "Resident evil info 8.jpg",
+            );
+
+            let i = 0;
+
+            NextBtn.onclick = function() {
+                if(i < 8){
+                    
+                    Slide.src = slideimages[i+1]
+                        i++;
+
+                    }
+            }
+
+
+            BackBtn.onclick = function() {
+                if(i > 0){
+                    
+                    Slide.src = slideimages[i-1]
+                        i--;
+
+                    }
+            }
+        </script>
+
+            
+
+
+        
+
+
+
+
+
+
+
+    </body>
+
+
+
+
+</html>
